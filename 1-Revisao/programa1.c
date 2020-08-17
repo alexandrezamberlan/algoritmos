@@ -43,4 +43,5 @@ int main() {
     salario_total_vendedor = salario_fixo_vendedor + comissao_final_vendedor;
     //mostra todos os dados
     printf("O vendedor %d tem salário final de %.2f\n", codigo_vendedor, salario_total_vendedor);
+    return 1;
 }
