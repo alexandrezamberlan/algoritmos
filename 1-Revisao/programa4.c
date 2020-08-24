@@ -3,7 +3,6 @@
 #include <locale.h>
 #include <string.h>
 
-
 //strlen - string length -> comprimento da variável vetor de caracteres
 /**
  * Faça um programa que leia uma palavra qualquer e depois mostre apenas as vogais.
