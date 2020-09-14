@@ -6,7 +6,7 @@
  
 #include <stdio.h>
 #include <stdlib.h>
-#define TAM 50
+#define TAM 2
 
 typedef struct {
 	char nome[50];
