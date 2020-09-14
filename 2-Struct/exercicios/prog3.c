@@ -12,6 +12,7 @@ typedef struct {
 	char nome[50];
     char cidade[50];
     float totalCompraMes;
+    char mesDaCompra[100];
 } Cliente;
 
 int main() {
@@ -22,8 +23,9 @@ int main() {
     //recebendo dados dos clientes
     i = 0;
     do {
-        system("clear");
+        system("clear"); //para o windows, usar system("cls"); para limpar
         printf("Você vai ler os dados do CLIENTE: %d\n", i+1);
+        
         printf("Nome: ");
         //scanf("%s", vetor[i].nome);
         gets(vetor[i].nome);
@@ -33,10 +35,14 @@ int main() {
         //scanf("%s", vetor[i].cidade);
         gets(vetor[i].cidade);
         fflush(stdin);
+        
         printf("Total de compras no mês: ");
         scanf("%f", &vetor[i].totalCompraMes);
         fflush(stdin);
         
+        printf("Qual o mês da compra? ");
+        scanf("%s", vetor[i].mesDaCompra);
+
         printf("=======================================\n");
         i++;
         if (i == TAM) {
@@ -48,12 +54,12 @@ int main() {
         fflush(stdin);
     } while (opcao == 1); 
 
-    system("clear");
+    system("clear");  //para o windows, usar system("cls"); para limpar
     //exibindo dados dos clientes
     printf("\n\nLISTA DE CLIENTES CADASTRADOS\n");
     
     for (iAux = 0; iAux < i; iAux++) {
-        printf("%s\n%s\nR$ %.2f\n", vetor[iAux].nome, vetor[iAux].cidade, vetor[iAux].totalCompraMes);
+        printf("%s\n%s\nR$ %.2f\n%s\n", vetor[iAux].nome, vetor[iAux].cidade, vetor[iAux].totalCompraMes, vetor[iAux].mesDaCompra);
         printf("--------------------\n");
     }
 
