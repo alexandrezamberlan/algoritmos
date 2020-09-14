@@ -7,6 +7,8 @@
  
  #include <stdio.h>
  #include <stdlib.h>
+ #include <math.h>
+ #define PI 3.14
 
 typedef struct {
 	int x, y; //coord. do centro do circulo
@@ -41,7 +43,7 @@ int main() {
 	c.perimetro = 2 * PI * c.raio;
 
 	//calcular e armazenar a area do circulo
-	c.area = PI * pow(c.raio, 2);
+	c.area = PI * pow(c.raio, 2);//função que eleva o raio de c ao quadrado
 
 
 	printf("Lendo dados de um retangulo\n");
@@ -54,10 +56,10 @@ int main() {
 	printf("Digite coordenada y inferior direita do retangulo: ");
 	scanf("%d", &r.yInferiorDir);
 	//calcular e armazenar altura do retangulo
-	r.altura = abs(r.ySuperiorEsq - r.yInferiorDir);
+	r.altura = abs(r.ySuperiorEsq - r.yInferiorDir); //função que retorna o valor absoluto da equação
 
 	//calcular e armazenar a base do retangulo
-	r.base = abs(r.xSuperiorEsq - r.yInferiorDir);
+	r.base = abs(r.xSuperiorEsq - r.xInferiorDir);
 	
 	//calcular e armazenar o perimetro do retangulo
 	r.perimetro = (r.altura * 2) + (r.base * 2);
