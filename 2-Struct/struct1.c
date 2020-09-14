@@ -16,5 +16,8 @@ int main() {
 	strcpy(umAluno.nome, "Carlos");
 	printf("Dados de um aluno: %d -> %s\n", umAluno.matricula, umAluno.nome);
 
+	char umaFrase[100];
+	strcpy(umaFrase, "olá turma de algo2");
+
 	return 1;
 }

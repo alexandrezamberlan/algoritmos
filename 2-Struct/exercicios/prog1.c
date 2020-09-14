@@ -1,23 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 /**
-1.	Escreva um programa que faça o controle das informações relativas aos 
-funcionários de uma determinada empresa. As informações que devem ser 
-armazenadas são: NOME, SALÁRIO, CARGO, IDADE e SEXO. 
-Defina a estrutura de dados e faça a leitura e exibição dos dados para um 
-funcionário.
-*/
+ * Escreva um programa que faça o controle das informações relativas aos funcionários de uma determinada empresa. 
+ * As informações que devem ser armazenadas são: NOME, SALÁRIO, CARGO, IDADE e SEXO. 
+ * Defina a estrutura de dados e faça a leitura e exibição dos dados para um funcionário.
+ */
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+
 typedef struct {
-	char nome[100];
-	double salario;
-	char cargo[100];
-	int idade;
-	char sexo; //M ou F
+    char nome[100];
+    float salario;
+    char cargo[100];
+    int idade;
+    char sexo; //M ou F
 } Funcionario;
 
-int main() {
-	Funcionario umFuncionario;
+ int main() {
+     Funcionario umFuncionario;
 
 	printf("Lendo dados de um funcionario\n");
 	printf("Nome: ");
@@ -36,13 +35,6 @@ int main() {
 	printf("Exibindo dados de um funcionario\n");
 	printf("Nome: %s. Cargo: %s\n\n", umFuncionario.nome, umFuncionario.cargo);
 
-	return 1;
-}
 
-
-
-
-
-
-
-
+     return 1;
+ }

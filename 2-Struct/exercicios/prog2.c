@@ -1,16 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-#define PI 3.14
 /**
-2.	Em um plano cartesiano, um círculo pode ser definido pelas coordenadas 
-do centro e pelo raio, enquanto um retângulo de lados paralelos aos eixos 
-pode ser definido pelas coordenadas dos vértices superior esquerdo e 
-inferior direito. 
-Escreva um programa que leia os valores que definem um retângulo e um círculo, 
-e verifique qual tem o maior perímetro e qual tem a maior área.
-*/
+ * Em um plano cartesiano, um círculo pode ser definido pelas coordenadas do centro e pelo raio, 
+ * enquanto um retângulo de lados paralelos aos eixos pode ser definido pelas coordenadas dos 
+ * vértices superior esquerdo e inferior direito. Escreva um programa que leia os valores que definem 
+ * um retângulo e um círculo, e verifique qual tem o maior perímetro e qual tem a maior área.
+ */
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+
 typedef struct {
 	int x, y; //coord. do centro do circulo
 	int raio;
@@ -83,11 +80,3 @@ int main() {
 	return 1;
 
 }
-
-
-
-
-
-
-
-
