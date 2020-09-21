@@ -23,6 +23,7 @@ int main() {
     char letra;
     int opcao;
     int i = 0;
+    int iAux;
 
     int valor; 
 
@@ -131,6 +132,20 @@ int main() {
             case 2 :system("clear");//para o windows use system("cls");
                     printf("LISTAGEM DE ATENDIMENTOS\n");
                     //método listar atendimentos
+                    if (i == 0) {
+                        printf("Estrutura vazia...\n");
+                    } else {
+                        for (iAux = 0; iAux < i; iAux++) {
+                            printf("Data atendimento: %s\n", vetor[iAux].data);
+                            printf("Nome............: %s\n", vetor[iAux].nome);
+                            printf("Idade...........: %d\n", vetor[iAux].idade);
+                            printf("Peso kg.........: %.1f\n", vetor[iAux].peso);
+                            printf("Altura m........: %.1f\n", vetor[iAux].altura);
+                            printf("IMC.............: %.1f\n", vetor[iAux].imc);
+                            printf("Resultado: %d com %s\n", vetor[iAux].resultadoTriagem, vetor[iAux].resultado);
+                            printf("---------------------------\n");
+                        }
+                    }
                     break;
             case 3 :system("clear");//para o windows use system("cls");
                     printf("PESQUISA POR ATENDIMENTO\n");
