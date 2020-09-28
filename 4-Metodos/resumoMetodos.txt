@@ -1,0 +1,30 @@
+Programar por meio de métodos, significa usar modularização em código.
+    - Modularizar é dividir o código em funcionalidades: DIVIDIR PARA CONQUISTAR.... auxilia na manutenção, no reuso e no entendimento da funcionalidade
+    - Há duas categorias/tipos
+        - Métodos sem retorno (void): procedimento
+            - pode ou não ter parâmetros
+        - Métodos com retorno (return e o tipo na assinatura do método): função
+            - pode ou não ter parâmetros
+            - no final do processamento do método com retorno, há um valor ou um objeto no ponto de chamada do método
+
+    Exemplos:
+
+        //exemplos no uso
+        print("%d%", idade); -> método sem retorno e com 2 parâmetros (1o é uma string e o 2o é uma variável inteira)
+        scanf("%d", &tamanho); -> método sem retorno e com 2 parâmetros
+        populaVetor(vetor, tamanho); -> método sem retorno e com 2 parâmetros (1o é vetor de inteiros e o 2o é a quantidade de elementos, ou seja, um inteiro)
+
+        //exemplos na declaração
+        void exibeVetor(int vetor[], int tamanho) {
+
+        }
+
+        //exemplos no uso
+        x = geraNumero(100); -> método com retorno e com 1 parâmetro (um valor inteiro)
+        x = rand() % 100; -> método com retorno e sem parâmetro
+
+        if (ehPar(num) == 1) { -> método com retorno (um inteiro) e com um parâmetro inteiro
+
+        }
+
+
