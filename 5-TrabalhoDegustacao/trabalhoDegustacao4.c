@@ -68,6 +68,23 @@ void gerarDegustacao(Degustacao lista[], int *i) {
 }
 
 
+void listarDegustacoes(Degustacao lista[], int *i) {
+    if (*i == 0) {
+        printf("Estrutura vazia de degustações!\n");
+    } else {
+        int iAux;
+        for (iAux = 0; iAux < *i; iAux++) {
+            printf("Data degustação: %02d/%02d/%d. Hora: %02d:%02d\n", lista[iAux].dataHoraDegustacao.tm_mday, lista[iAux].dataHoraDegustacao.tm_mon + 1, lista[iAux].dataHoraDegustacao.tm_year + 1900,
+                                                                    lista[iAux].dataHoraDegustacao.tm_hour,  lista[iAux].dataHoraDegustacao.tm_min);
+            printf("Tipo cerveja   : %s\n", lista[iAux].tipoCerveja);
+            printf("Brewer         : %s\n", lista[iAux].nomeFabricante);
+            printf("Degustador     : %s\n", lista[iAux].nomeDegustador);
+            printf("Avaliação      : %d\n", lista[iAux].notaDegustacao);
+            printf("----------------------------------\n");
+        }
+    }
+}
+
 //& -> *
 void menu(Degustacao lista[], int *i) {
     int opcao;
@@ -87,12 +104,11 @@ void menu(Degustacao lista[], int *i) {
         {
         case 1:
             printf("GERAR DEGUSTAÇÃO\n\n");
-            //chamada do metodo
             gerarDegustacao(lista, i);
             break;
         case 2:
             printf("LISTAR TODAS AS DEGUSTAÇÕES\n\n");
-            //chamada do metodo
+            listarDegustacoes(lista, i);
             break;
         case 3:
             printf("LISTAR DEGUSTAÇÕES POR ESTILO\n\n");
