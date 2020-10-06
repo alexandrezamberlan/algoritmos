@@ -67,7 +67,6 @@ void gerarDegustacao(Degustacao lista[], int *i) {
     }
 }
 
-
 void listarDegustacoes(Degustacao lista[], int *i) {
     if (*i == 0) {
         printf("Estrutura vazia de degustações!\n");
