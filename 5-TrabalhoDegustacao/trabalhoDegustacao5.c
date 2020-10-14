@@ -92,11 +92,18 @@ void rankearDegustacoes(Degustacao lista[], int *i) {
     do {
         houveTroca = 0; //inicio o processo assumindo que nao houve troca
         for (iAux = 0; iAux < *i - 1; iAux++) {
-            if (lista[iAux].notaDegustacao < lista[iAux + 1].notaDegustacao) {
+            if (strcasecmp(lista[iAux].tipoCerveja, lista[iAux + 1].tipoCerveja) > 0) {
                 houveTroca = 1;
                 tmp = lista[iAux];
                 lista[iAux] = lista[iAux + 1];
                 lista[iAux + 1] = tmp;
+            } else if (strcasecmp(lista[iAux].tipoCerveja, lista[iAux + 1].tipoCerveja) == 0) {
+                if (lista[iAux].notaDegustacao < lista[iAux + 1].notaDegustacao) {
+                    houveTroca = 1;
+                    tmp = lista[iAux];
+                    lista[iAux] = lista[iAux + 1];
+                    lista[iAux + 1] = tmp;
+                }
             }
         }
     } while (houveTroca);
@@ -159,3 +166,4 @@ int main() {
 
     return 1;
 }
+
