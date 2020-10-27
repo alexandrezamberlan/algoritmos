@@ -157,7 +157,7 @@ void cadastrar() {
 
         i++;
     } else {
-        printf("Lotou a estrutura de dados para atendimentos.....\n");
+        printf("Lotou a estrutura de dados para atendimentos......\n");
     }
 }
 
