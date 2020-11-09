@@ -235,11 +235,9 @@ void atualizarArquivo() {
     fclose(procuradorArquivoSaida);
 }
 
-void popularVetor(){
+void trazerDadosArquivoParaVetor(){
     FILE *procuradorArquivo = fopen("covid.dat","r");
     if (!procuradorArquivo) return;
-    char data[100];
-    char hora[100];
 
     do {
         fscanf(procuradorArquivo,"%d %d %d %d %d %s %d %f %f %f %d %s", &vetor[i].data.tm_mday,
@@ -264,7 +262,7 @@ int main() {
 
     TAM = descobrirQuantosAtendimentos() + 10;
     vetor = malloc(sizeof(Atendimento) * TAM);
-    popularVetor();
+    trazerDadosArquivoParaVetor();
     
 
     do {
