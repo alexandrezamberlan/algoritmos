@@ -3,9 +3,8 @@
 #include <locale.h>
 #include <time.h>
 #include <string.h>
-/*
-código que recebe uma frase e retorna quantas palavras há nela
-*/
+
+
 
 int contarPalavras1(char *frase) {
     int qtdEspacosEmBranco = 0;
@@ -55,17 +54,26 @@ void mostrarPalavras2(char *frase) {
     }
 }
 
+void abrirArquivo() {
+    FILE *procuradorArquivo;
+    procuradorArquivo = fopen("dados.dat", "r");
+
+    if (!procuradorArquivo) {
+        printf("Base de dados corrompida....\n");
+        exit(0);
+    }
+
+    char linha[100];
+    while (fgets(linha,100,procuradorArquivo)) {
+        mostrarPalavras2(linha);
+        printf("-------------------\n\n");
+    }
+    fclose(procuradorArquivo);
+}
+
 int main() {
-    char frase[100];
-
-    setlocale(LC_ALL,"Portuguese");
     
-    printf("Digite uma frase: ");
-    gets(frase);
-
-    printf("Na frase há %d palavras\n", contarPalavras1(frase));
-
-    mostrarPalavras2(frase);
+    abrirArquivo();
 
     return 1;
 }
