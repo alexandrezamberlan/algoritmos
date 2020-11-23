@@ -12,7 +12,7 @@ typedef struct {
 } Pessoa;
 
 
-void popularVetor(char *linha, Pessoa *vetor, int *p) {
+void popularVetor(char *linha, Pessoa *vetorPessoas, int *p) {
     //na linha deve ter: matricula, nome, idade, categoria
     char palavra[100];
     int i, j;
@@ -28,16 +28,16 @@ void popularVetor(char *linha, Pessoa *vetor, int *p) {
             if (palavra[0] != '\0') {
                 switch (contaArroba) {
                     case 1 : //matricula
-                            vetor[*p].matricula = atoi(palavra);
+                            vetorPessoas[*p].matricula = atoi(palavra);
                             break;
                     case 2 : //nome
-                            strcpy(vetor[*p].nome, palavra);
+                            strcpy(vetorPessoas[*p].nome, palavra);
                             break;
                     case 3 : //idade
-                            vetor[*p].idade = atoi(palavra);
+                            vetorPessoas[*p].idade = atoi(palavra);
                             break;
                     case 4 : //categoria
-                            strcpy(vetor[*p].categoria,palavra);
+                            strcpy(vetorPessoas[*p].categoria,palavra);
                             break;            
                 }
             }
@@ -49,7 +49,7 @@ void popularVetor(char *linha, Pessoa *vetor, int *p) {
 
 
 
-void abrirArquivoPopularVetor(Pessoa *vetor, int *i) {
+void abrirArquivoPopularVetor(Pessoa *vetorPessoas, int *i) {
     FILE *procuradorArquivo;
     procuradorArquivo = fopen("dados.dat", "r");
 
@@ -66,14 +66,14 @@ void abrirArquivoPopularVetor(Pessoa *vetor, int *i) {
     fclose(procuradorArquivo);
 }
 
-void exibirVetor(Pessoa *vetor, int n) {
+void exibirVetor(Pessoa *vetorPessoas, int n) {
     int i;
     for (i = 0; i < n; i++) {
         printf("----------------------------------------\n");
-        printf("Matricula: %d\n", vetor[i].matricula);
-        printf("Nome     : %s\n", vetor[i].nome);
-        printf("Idade    : %d\n", vetor[i].idade);
-        printf("Categoria: %s\n", vetor[i].categoria);
+        printf("Matricula: %d\n", vetorPessoas[i].matricula);
+        printf("Nome     : %s\n", vetorPessoas[i].nome);
+        printf("Idade    : %d\n", vetorPessoas[i].idade);
+        printf("Categoria: %s\n", vetorPessoas[i].categoria);
         printf("----------------------------------------\n");
     }
 }
