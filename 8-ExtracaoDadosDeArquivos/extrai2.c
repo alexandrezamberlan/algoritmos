@@ -4,8 +4,6 @@
 #include <time.h>
 #include <string.h>
 
-
-
 int contarPalavras1(char *frase) {
     int qtdEspacosEmBranco = 0;
     int i;

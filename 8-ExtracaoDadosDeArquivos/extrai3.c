@@ -47,8 +47,6 @@ void popularVetor(char *linha, Pessoa *vetorPessoas, int *p) {
     }
 }
 
-
-
 void abrirArquivoPopularVetor(Pessoa *vetorPessoas, int *i) {
     FILE *procuradorArquivo;
     procuradorArquivo = fopen("dados.dat", "r");
@@ -60,7 +58,7 @@ void abrirArquivoPopularVetor(Pessoa *vetorPessoas, int *i) {
 
     char linha[100];
     while (fgets(linha,100,procuradorArquivo)) {
-        popularVetor(linha, vetor, i); //note que o i é um ponteiro, logo ele é passado como referência
+        popularVetor(linha, vetorPessoas, i); //note que o i é um ponteiro, logo ele é passado como referência
         *i = *i + 1;
     }
     fclose(procuradorArquivo);
