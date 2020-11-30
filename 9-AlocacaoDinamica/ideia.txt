@@ -1,0 +1,40 @@
+Alocação dinâmica:
+    - ocupar (malloc) ou liberar (free) memória em tempo de execução
+
+    Situação anterior
+        int *vetor;
+        vetor = malloc(sizeof(int) * posicoes);
+
+    A ideia atual
+        A medida que for necessário UM campo, aí então há a alocação
+        A medidade que for necessário EXCLUIR UM campo, aí há a liberação
+
+
+    EXEMPLO DE ALOCAÇÃO ESTÁTICA VIA VETORES (engessamento)
+    vetor
+    0           1           2       3       4       5       6       7       8       9
+    1000        1001
+    alexandre   pedro
+
+    EXEMPLO DE ALOCAÇÃO DINÂMICA VIA PILHAS/LISTAS
+    pilha = AAC
+
+      AAD                   AAC                 AAA
+      matricula = 1002      matricula = 1001    matricula = 1000
+      nome = pedro          nome = jonathan     nome = alexandre
+      prox = AAC            prox = AAA          prox = NULL
+
+                                pR                   p
+
+
+    Dessa forma, a estrutura tem este padrão:
+
+    typedef struct no {
+        int matricula;
+        char nome[100];
+        struct no *prox;
+    } Celula;
+
+    Na disciplina de Algortimos e Programação 2, vamos trabalhar alocação dinâmica em PILHA
+        - toda a operação (inserção, remoção e pesquisa) se dá a partir do topo da PILHA
+        - topo será o ponteiro que conheçe o último elemento inserido.
