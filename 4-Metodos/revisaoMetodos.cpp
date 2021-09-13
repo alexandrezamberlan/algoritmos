@@ -6,6 +6,7 @@ void mostrarVogais(string frase);
 int contarVogais(string frase);
 void mostrarVogaisUnicas(string frase);
 int contarVogaisUnicas(string frase);
+void inicializarVetor(int *vetor, int n); //void inicializarVetor(int vetor[]);
 
 
 int main() {
@@ -16,8 +17,14 @@ int main() {
 
     cout << "Tamanho da frase: " << frase.length() << endl; //método com retorno (int) e sem parâmetros
     
-    mostrarVogais(frase); //método não nativo e sem retorno
-    cout << "Total de vogais: " << contarVogais(frase) << endl; //método não nativo com retorno
+    //mostrarVogaisUnicas(frase); //método não nativo e sem retorno
+    cout << "Total de vogais: " << contarVogaisUnicas(frase) << endl; //método não nativo com retorno
+
+    cout << "a - " << (int)'a' << endl;
+    cout << "e - " << (int)'e' << endl;
+    cout << "i - " << (int)'i' << endl;
+    cout << "o - " << (int)'o' << endl;
+    cout << "u - " << (int)'u' << endl;
 
     return 1;
 }
@@ -41,20 +48,37 @@ int contarVogais(string frase) {
 }
 
 void mostrarVogaisUnicas(string frase) {
+    int vogais[118]; 
+    inicializarVetor(vogais, 118);
+
     for (int i = 0; i < frase.length(); i++) {
         if (frase[i] == 'a' || frase[i] == 'e' || frase[i] == 'i' || frase[i] == 'o' || frase[i] == 'u') {
-            cout << frase[i] << endl;
+            if (vogais[(int)frase[i]] == 0) {
+                vogais[(int)frase[i]] = 1;
+                cout << frase[i] << endl;
+            }
         }
     }
 }
 
 int contarVogaisUnicas(string frase) {
-    
+    int vogais[118]; 
+    inicializarVetor(vogais, 118);
+
     int quantidadeVogais = 0;
     for (int i = 0; i < frase.length(); i++) {
         if (frase[i] == 'a' || frase[i] == 'e' || frase[i] == 'i' || frase[i] == 'o' || frase[i] == 'u') {
-            quantidadeVogais++;
+            if (vogais[(int)frase[i]] == 0) {
+                vogais[(int)frase[i]] = 1;
+                quantidadeVogais++;
+            }
         }
     }
     return quantidadeVogais;
+}
+
+void inicializarVetor(int *vetor, int n) { //void inicializarVetor(int vetor[]) {
+    for (int i = 0; i < n; i++) {
+        vetor[i] = 0;
+    }
 }
