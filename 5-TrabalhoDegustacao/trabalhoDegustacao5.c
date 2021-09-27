@@ -111,7 +111,7 @@ void rankearDegustacoes(Degustacao lista[], int *i) {
 }
 
 //& -> *
-void menu(Degustacao lista[], int *i) {
+void menu(Degustacao lista[], int *i) { //*i é o ponteiro para o endereço do i no main
     int opcao;
     char letra;
     do {
@@ -129,7 +129,7 @@ void menu(Degustacao lista[], int *i) {
         {
         case 1:
             printf("GERAR DEGUSTAÇÃO\n\n");
-            gerarDegustacao(lista, i);
+            gerarDegustacao(lista, i); //
             break;
         case 2:
             printf("LISTAR TODAS AS DEGUSTAÇÕES\n\n");
@@ -157,12 +157,15 @@ void menu(Degustacao lista[], int *i) {
 }
 
 int main() {
-    Degustacao lista[TAM];
+    Degustacao lista[TAM]; //todo vetor/array/matriz é um ponteiro
     int i = 0;
 
-    //1o parametro é por referência, pois é um vetor
+    //1o parametro é por referência, pois é um vetor. Significa que é o endereço da lista que é passado
     //2o parametro é por referência EXPLICITA, pois há um &
     menu(lista, &i);
+
+    //quando um endereço é passado no parâmetro &, quem o recebe é um ponteiro *
+    //&(endereço de uma variável) -> *(ponteiro de um endereço de uma variável)
 
     return 1;
 }

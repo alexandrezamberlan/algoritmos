@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 int main() {
     FILE *procuradorArquivo;
     char nomeArquivo[200];
@@ -24,7 +23,6 @@ int main() {
         
         fprintf(procuradorArquivo, "\n%s", frase);
         fflush(procuradorArquivo); //grava literalmente no arquivo.
-        
     } while (1);
 
     //fechar o arquivo
