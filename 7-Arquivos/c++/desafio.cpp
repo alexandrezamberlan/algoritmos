@@ -55,11 +55,16 @@ void popularVetorDoArquivo(Aluno *vetor, int *i) {
 	procuradorArquivo.close();
 }
 
+string pegarPrimeiroNome(string nome)
+{
+    return "";
+}
+
 void exibirVetor(Aluno *vetor, int n)
 {
     for (int i = 0; i < n; i++) 
     {
-        cout << vetor[i].nome << " - " << vetor[i].esporte << end;
+        cout << pegarPrimeiroNome(vetor[i].nome) << " - " << vetor[i].esporte << endl;
     }
 }
 
