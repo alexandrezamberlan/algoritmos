@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-using namespace std;
+using namespace std; 
 
 int main() {
     //abrir um arquivo texto e exibir seu conteudo na tela
@@ -13,7 +13,7 @@ int main() {
     
     //abrir arquivo para leitura
 	//https://www.tutorialspoint.com/cplusplus/cpp_files_streams
-	ifstream procuradorArquivo; 
+	ifstream procuradorArquivo; //tipo de arquivo para leitura
     procuradorArquivo.open(nomeArquivo); 
 
     if (!procuradorArquivo) {
@@ -24,9 +24,12 @@ int main() {
    		
 	//le o arquivo capturando as frases
 	string frase;
-	while (procuradorArquivo >> frase) {
+	while (!procuradorArquivo.eof()) {
+		getline(procuradorArquivo,frase); //lendo a linha inteira
+		// procuradorArquivo >> frase; //lendo palavra por palavra da linha 
 		cout << frase << endl;
 	}
+
 	procuradorArquivo.close();
 
     return 1;

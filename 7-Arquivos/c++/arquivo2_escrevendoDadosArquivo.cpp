@@ -23,9 +23,10 @@ int main() {
     string palavra;
 
     do {
-        cout << "Escreva um nome para gravar no arquivo ou a palavra 'fim' para encerrar: ";
-        cin >> palavra;
         fflush(stdin);
+        cout << "Escreva um nome para gravar no arquivo ou a palavra 'fim' para encerrar: ";
+        getline(cin, palavra);
+        
         if (palavra == "fim") {
             break;
         }
