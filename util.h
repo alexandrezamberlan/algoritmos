@@ -1,6 +1,11 @@
+#include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
 #include <iostream>
 #include <string>
-#include <stdlib.h>
+#include <cstring>
 
 using namespace std;
 
@@ -20,4 +25,32 @@ string *split(string frase, string delimitador = " ")
 
     return vetor;
 }
+
+void paraMaiusculoVetorChar(char frase[]) { //para C
+    int i;
+    for (i = 0; i < strlen(frase); i++) {
+        frase[i] = toupper(frase[i]); 
+    }
+}
+
+void paraMaiusculoStringSemRetorno(string *frase) { //para C++ com passagem de parametro por referencia explicita
+    int i;
+    for (i = 0; i < (*frase).length(); i++) {
+        (*frase)[i] = toupper((*frase)[i]);
+    }    
+}
+
+string paraMaiusculoStringComRetorno(string frase) { //para C++ como passagem de parametro por valor
+    int i;
+    for (i = 0; i < frase.length(); i++) {
+        frase[i] = toupper(frase[i]);
+    }
+    return frase;
+}
+
+struct tm pegaDataHora() {
+    time_t t = time(NULL);
+    return *localtime(&t);
+}
+
 
