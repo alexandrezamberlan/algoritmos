@@ -15,7 +15,7 @@ using namespace std;
 
 typedef struct {
     string nome;
-    string email;
+    string email; 
     string nomeAmigo;
     string emailAmigo;
 } AmigoSecreto;
@@ -111,8 +111,16 @@ void atualizaArquivoComAmigos(AmigoSecreto vetor[], int n) {
 	procuradorEscrita.close();
 }
 
+int jaExisteAmigo(string nome, AmigoSecreto vetor[], int n) {
+    for (int i = 0; i < n; i++) {
+        if (nome == vetor[i].nome) return 1;
+    }
+    return 0;
+}
+
 void cadastraAmigo(AmigoSecreto vetor[], int n) {
 	int i;
+    string nome;
 	for (i = 0; i < n; i++){
 		if (vetor[i].nome == " ") {
 			break;
@@ -120,9 +128,14 @@ void cadastraAmigo(AmigoSecreto vetor[], int n) {
 	}        				         	
 	cin.ignore(); //equivale ao fflush do c
 	cout << "Nome: ";    
-	getline(cin, vetor[i].nome);
-    vetor[i].nome = paraMaiusculo(vetor[i].nome);
-    
+	getline(cin,  nome);
+    nome = paraMaiusculo(nome);
+
+    if (jaExisteAmigo(nome,vetor,n)) {
+        cout << "Amigo ja cadastrado!" << endl;
+        return;
+    }
+    vetor[i].nome = nome;
     //cin.ignore(); //equivale ao fflush do c
     cout << "Email: ";
 	cin >> vetor[i].email;
@@ -188,7 +201,6 @@ void sortearAmigos(AmigoSecreto vetor[], int qtdAmigos) {
     int i = 0;
     int valor;
     do {
-        
         do {
             valor = rand() % qtdAmigos;
         } while (jaExiste(valor,vetorSorteio,i) || valor == i);
@@ -253,6 +265,7 @@ int main() {
                 cout << "Amigo secreto gerado" << endl;
                 break;
             case 4 :   
+                cout << "Preparando para enviar por email!!" << endl;
                 break;
             case 5 : cout << "Obrigado por usar o sistema" << endl;   
                 break;                
