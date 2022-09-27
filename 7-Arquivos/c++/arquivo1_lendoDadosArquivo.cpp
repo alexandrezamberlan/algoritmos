@@ -23,11 +23,12 @@ int main() {
  
    		
 	//le o arquivo capturando as frases
-	string frase;
+	string linha;
 	while (!procuradorArquivo.eof()) {
-		getline(procuradorArquivo,frase); //lendo a linha inteira
+		getline(procuradorArquivo,linha); //lendo a linha inteira
 		// procuradorArquivo >> frase; //lendo palavra por palavra da linha 
-		cout << frase << endl;
+		cout << linha << endl;
+		//tratar a linha e extrair dados dela
 	}
 
 	procuradorArquivo.close();
