@@ -1,3 +1,5 @@
 roda
 .vscode
 .DS_Store
+.exe
+bin
