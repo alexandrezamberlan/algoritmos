@@ -1,0 +1,34 @@
+Exercícios:
+Para cada método solicitado, implementar o método e aplicá-lo
+em um código exemplo.
+
+1) método que recebe um número inteiro e devolve seu valor
+ao quadrado
+
+2) método que recebe uma frase e mostra quantas palavras existem
+na frase
+
+3) método que recebe um número inteiro e informa se é primo
+
+4) método que recebe dois anos (atual e de nascimento) e 
+devolve a idade
+    Sugestão: pode-se capturar o ano atual do sistema oper.
+
+5) método que recebe um vetor com números inteiros e retorna
+o maior valor do vetor
+
+6) método que recebe dois vetores de números inteiros e 
+mostra os números que aparecem tanto no primeiro, quanto no
+segundo vetor.
+
+7) método que recebe a sigla de um estado brasileiro
+e retorna o nome do estado por completo.
+
+8) método que recebe uma data (dd/mm/aaaa) e retorna
+se é valida sim ou não.
+
+9) método que recebe um vetor e o seu tamanho.
+Retorna o vetor inicializado com 0.
+
+10) método que recebe um nome e retorna se o nome
+está ou não completo.
