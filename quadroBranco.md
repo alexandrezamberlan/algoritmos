@@ -12,7 +12,6 @@
         3) A partir do programa anterior, pesquise o método de ordenação da bolha ou bubble sort, e aplique no vetor de nomes do código anterior, exibindo os nomes cadastrados.
 
 ## Aula 3 
-
 Momento de revisão
     - programando um menu
     - usando structs
