@@ -75,7 +75,7 @@ int main() {
                 getline(cin,nome);
                 int quantidadeLocalizados = 0;
                 for (int i = 0; i < quantidadeInseridos; i++) {
-                    if (nomes[i].find(nome)) {
+                    if (nomes[i].find(nome) != std::string::npos) {
                         cout << nomes[i] << endl;
                         quantidadeLocalizados++;
                     }
