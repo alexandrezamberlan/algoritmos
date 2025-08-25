@@ -4,6 +4,8 @@
 using namespace std;
 
 #include "meusIncludes.h"
+#include "meusMetodos.h"
+
 
 int main() 
 {
@@ -21,43 +23,12 @@ int main()
         cout << "4 - Sair" << endl;
         cout << "Opcao: ";
         cin >> opcao;
-        fflush(stdin);
+        fflush(stdin); //metodo com 1 parâmetro (stdin) e sem retorno
 
         switch (opcao)
         {
         case 1:
-            cout << "AREA DE EMPRESTIMO" << endl;
-            if (qtdEmprestimos == TAM) {
-                cout << "Voce nao tem mais itens para emprestar..." << endl;
-            } else {
-                cout << "Pessoa: ";
-                getline(cin, item.nome);
-                fflush(stdin);
-                cout << "Numero de celular: ";
-                cin >> item.celular;
-                fflush(stdin);
-                cout << "Item: ";
-                getline(cin,item.descricao);
-                fflush(stdin);
-                //rotina para verificar se o item ja nao foi emprestado
-
-                //rotina para capturar a data do emprestimo
-                time_t agora = time(nullptr);
-                tm* agora_local = localtime(&agora);
-
-                string dia = to_string(agora_local->tm_mday);
-                string mes = to_string(agora_local->tm_mon + 1);
-                string ano = to_string(agora_local->tm_year + 1900);
-
-                item.data =  dia + "/" + mes + "/" + ano + "\n";
-
-    
-
-                //armazenar na base temporaria
-                meusItens[qtdEmprestimos] = item;
-                qtdEmprestimos++;
-                cout << "Item registrado com sucesso...." << endl;
-            }
+            emprestar(meusItens, item, qtdEmprestimos); //método com 3 parâmetros sem retorno
             break;
         case 2:
             cout << "AREA DE DEVOLUCAO" << endl;

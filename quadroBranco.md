@@ -1,5 +1,11 @@
 # Quadro Branco e Plano de aulas
 
+## Aula 5 
+    - Programação estrutural e procedural
+        - até então, programou sequencialmente - 'a la script'
+        - modularização
+            - dividir o código/programa em métodos (função ou procedimento)
+
 ## Aula 4
     - Correção e discussão dos exercícios aula anterior
     - Mais exercícios de fixação
