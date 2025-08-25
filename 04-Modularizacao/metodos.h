@@ -23,3 +23,21 @@ void exibir(string frase, int vetor[], int quantidade, int tamanho) {
         cout << vetor[i] << endl;
     }
 }
+
+void menorElemento(int vetor[], int quantidade, int tamanho) {
+    int menor = vetor[0];
+
+    if (quantidade > tamanho) {
+        cout << "Essa quantidade nao eh possivel...";
+        return; //forcando a saida do metodo
+    }
+
+    for (int i = 1; i < quantidade; i++) {
+        if (vetor[i] < menor) {
+            menor = vetor[i];
+        }
+    }
+
+    cout << "Menor elemento.... " << menor << endl;
+
+}

@@ -17,5 +17,10 @@ int main() {
     exibir("Exibindo vetor", vetor, quantidade, TAM);
 
     //metodo que receba um vetor, quantidade e seu tamanho; e exiba o menor elemento
+    menorElemento(vetor, quantidade, TAM);
+
+    //metodo que receba um vetor, quantidade e seu tamanho e ordene crescente o vetor - bolha
+    ordenar(vetor, quantidade, TAM);
+
     return 1;
 }
