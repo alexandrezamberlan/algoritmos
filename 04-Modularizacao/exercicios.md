@@ -10,3 +10,5 @@
 
 5) fazer um programa que tenha um método que receba um vetor de  números inteiros, o tamanho desse vetor e retorne true se o vetor estiver ordenado ou false se o vetor estiver desordenado.
 
+6) fazer um programa que tenha um método que receba um nome completo e retorne o primeiro nome desse nome completo.
+
