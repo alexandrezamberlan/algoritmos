@@ -1,5 +1,19 @@
 # Quadro Branco e Plano de aulas
 
+## Aula 6
+    - Programação em módulos
+        - métodos ou funções ou procedimentos
+            - função é um método com retorno - RETURN
+            - procedimento é um método sem retorno - VOID
+
+        - métodos devem ter:
+            - assinatura
+                void nomeMetodo(int a, string b, int vetor[]) { // tipo de retorno ou void (sem retorno), nome do método e lista de parâmetros
+                }
+
+                string nomeMetodo(int x) { //tipo de retorno string, nome do metodo e lista de parâmetros
+                }
+
 ## Aula 5 
     - Programação estrutural e procedural
         - até então, programou sequencialmente - 'a la script'
