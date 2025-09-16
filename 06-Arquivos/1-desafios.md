@@ -2,7 +2,7 @@
 
 1) Construa um programa (com módulo/método) que leia n nomes completos de pessoas e os exiba na tela;
 
-2) Construa um programa (com módulo/método) que leia n nomes completos de pessoas e os adicione em um vetor de n posicoes em que deve ser armazenado o nome completoe o sobrenome. Use a seguinte estrutura;
+2) Construa um programa (com módulo/método) que leia n nomes completos de pessoas e os adicione em um vetor de n posicoes em que deve ser armazenado o nome completo e o sobrenome. Use a seguinte estrutura;
 
 typedef struct {
     string nomeCompleto;
@@ -15,9 +15,9 @@ Dica: será preciso fazer uma função que extraia o sobrenome de um nome comple
 
 # Exercícios COM USO de arquivos texto
 
-1) Construa um programa (com módulo/método) que leia n nomes completos de pessoas DE UM ARQUIVO DE ORIGEM e os exiba na tela;
+4) Construa um programa (com módulo/método) que leia n nomes completos de pessoas DE UM ARQUIVO DE ORIGEM e os exiba na tela;
 
-2) Construa um programa (com módulo/método) que leia n nomes completos de pessoas DE UM ARQUIVO DE ORIGEM e os adicione em um vetor de n posicoes em que deve ser armazenado o nome completo e o sobrenome. Use a seguinte estrutura;
+5) Construa um programa (com módulo/método) que leia n nomes completos de pessoas DE UM ARQUIVO DE ORIGEM e os adicione em um vetor de n posicoes em que deve ser armazenado o nome completo e o sobrenome. Use a seguinte estrutura;
 
 typedef struct {
     string nomeCompleto;
@@ -34,4 +34,4 @@ Luisa Figueiredo; Figueiredo
 
 
 
-3) Construa um programa (com módulo/método) que leia n nomes de pessoas DE UM ARQUIVO DE ORIGEM, armazena em um vetor de nomes e os exiba na tela. Porém, é necessário GRAVAR ESSES NOMES JUNTAMENTE COM A QUANTIDADE DE CARACTERES EM UM ARQUIVO DESTINO.
+6) Construa um programa (com módulo/método) que leia n nomes de pessoas DE UM ARQUIVO DE ORIGEM, armazena em um vetor de nomes e os exiba na tela. Porém, é necessário GRAVAR ESSES NOMES JUNTAMENTE COM A QUANTIDADE DE CARACTERES EM UM ARQUIVO DESTINO.
