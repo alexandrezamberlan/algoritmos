@@ -3,17 +3,25 @@
 ## Aula 9
     - Funções mais arquivos (leitura e escrita)
         - Exercícios de fixação combinando funções com uso de arquivo texto
-            - Criar um programa que tenha uma função que receba uma frase e retorne a quantidade de vogais;
-            - Criar um programa que tenha uma função que receba uma frase e um caracter de pesquisa. A função deve retornar a frase substituindo o caracter de pesquisa pelo símbolo @.
+            1) Criar um programa que tenha uma função que receba uma frase e retorne a quantidade de vogais;
+            2) Criar um programa que tenha uma função que receba uma frase e um caracter de pesquisa. A função deve retornar a frase substituindo o caracter de pesquisa pelo símbolo @.
                 Por exemplo, Frase: "Turma de Algoritmos"
                              Letra de pesquisa: 'a' 
                              Resultado: "Turm@ de @lgoritmos"
-            - Criar um programa que tenha duas funções:
+            3) Criar um programa que tenha duas funções:
                 - função que receba uma frase e a retorne em maiúsculo
                 - função que receba uma frase e retorne a quantidade de palavras
-            - Criar um programa que tenha duas funções:
+            4) Criar um programa que tenha duas funções:
                 - função que receba o nome de um arquivo texto (.csv, .txt, .json, .dat) e retorne True caso o arquivo exista; ou False, caso contrário;
                 - função que receba o arquivo e retorne em uma string o conteúdo desse arquivo texto.
+            5) Criar um programa que tenha uma função que receba um nome de arquivo texto e retorne a quantidade de vogais;
+            6) Criar um programa que tenha uma função que receba um nome de arquivo texto e um caracter de pesquisa. A função deve retornar uma string contendo o conteúdo do arquivo, contudo substituindo o caracter de pesquisa pelo símbolo @.
+                Por exemplo, Frase: "Turma de Algoritmos"
+                             Letra de pesquisa: 'a' 
+                             Resultado: "Turm@ de @lgoritmos"
+            7) Criar um programa que tenha duas funções:
+                - função que receba um nome de arquivo texto e a retorne uma string com todas as palavras em maiusculo;
+                - função que receba um nome de arquivo texto e retorne a quantidade de palavras neste arquivo
 
 ## Aula 8
     - Correção e discussão da prova
