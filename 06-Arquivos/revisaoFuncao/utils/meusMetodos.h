@@ -41,3 +41,30 @@ string paraMaiusculo(string frase) {
     }
     return frase;
 }
+
+bool existeArquivo(string nomeArquivo) {
+    ifstream procuradorArquivo; //tipo de arquivo para leitura
+    procuradorArquivo.open(nomeArquivo); 
+    
+    if (procuradorArquivo) { //caso arquivo exista
+        procuradorArquivo.close();
+        return true;
+    } 
+    return false; //caso arquivo nao exista
+}
+
+string copiarArquivo2String(string nomeArquivo) {
+    ifstream procuradorArquivo; //tipo de arquivo para leitura
+    procuradorArquivo.open(nomeArquivo); 
+
+    string resposta = "";
+    string linha;
+    while (!procuradorArquivo.eof()) {
+		getline(procuradorArquivo,linha); //lendo a linha inteira
+		resposta = resposta + linha + "\n";
+	}
+  
+    procuradorArquivo.close();
+
+    return resposta;
+}
