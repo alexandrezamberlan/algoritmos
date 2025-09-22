@@ -1,5 +1,27 @@
 # Quadro Branco e Plano de aulas
 
+## Aula 9
+    - Funções mais arquivos (leitura e escrita)
+        - Exercícios de fixação combinando funções com uso de arquivo texto
+            - Criar um programa que tenha uma função que receba uma frase e retorne a quantidade de vogais;
+            - Criar um programa que tenha uma função que receba uma frase e um caracter de pesquisa. A função deve retornar a frase substituindo o caracter de pesquisa pelo símbolo @.
+                Por exemplo, Frase: "Turma de Algoritmos"
+                             Letra de pesquisa: 'a' 
+                             Resultado: "Turm@ de @lgoritmos"
+            - Criar um programa que tenha duas funções:
+                - função que receba uma frase e a retorne em maiúsculo
+                - função que receba uma frase e retorne a quantidade de palavras
+            - Criar um programa que tenha duas funções:
+                - função que receba o nome de um arquivo texto (.csv, .txt, .json, .dat) e retorne True caso o arquivo exista; ou False, caso contrário;
+                - função que receba o arquivo e retorne em uma string o conteúdo desse arquivo texto.
+
+## Aula 8
+    - Correção e discussão da prova
+    - Introdução a manipulação de arquivos texto (leitura)
+
+## Aula 7
+    - Avaliação teórica
+
 ## Aula 6
     - Programação em módulos
         - métodos ou funções ou procedimentos
