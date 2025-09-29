@@ -22,7 +22,6 @@ int main() {
         exit(0);
     } 
  
-   		
 	//le o arquivo capturando as frases
 	string linha;
 	while (!procuradorArquivo.eof()) {
