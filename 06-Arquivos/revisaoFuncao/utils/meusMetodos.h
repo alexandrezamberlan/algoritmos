@@ -21,6 +21,15 @@ string trocarCaracter(string frase, char letra) {
     return frase;
 }
 
+string trocarCaracterOrigemDestino(string frase, char letraOrigem, char letraDestino) {
+    for (int i = 0; i < frase.size(); i++) {
+        if (toupper(frase[i]) == toupper(letraOrigem)) {
+            frase[i] = letraDestino;
+        }
+    }
+    return frase;
+}
+
 int contarPalavras(string& frase) {
     istringstream stream(frase);
     string palavra;
