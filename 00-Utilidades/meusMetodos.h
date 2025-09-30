@@ -43,7 +43,7 @@ int conectarBase(string listaNomes[], string nomeBaseDados, int tamanho) {
     int quantidadeNomes = 0;
     while (!procuradorArquivo.eof() && quantidadeNomes < tamanho) {
 		getline(procuradorArquivo,linha); //lendo a linha inteira
-        listaNomes[quantidadeNomes] = linha;
+        listaNomes[quantidadeNomes] = linha; //a linha tem um nome completo
         quantidadeNomes++;
 	}
   

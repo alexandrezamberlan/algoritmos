@@ -10,6 +10,7 @@ int main() {
 	string listaNomes[TAM];
 	string nomeBaseDados = "base.dat";
     //ao iniciar, conectar com a base e atualizar a lista de nomes
+	//ir ate a base de dados, pegar os nomes do arquivo, colocar na lista e dizer quantos nomes há
 	int quantidadeNomes = conectarBase(listaNomes, nomeBaseDados, TAM);
 
 	//listar os nomes ja cadastrados
