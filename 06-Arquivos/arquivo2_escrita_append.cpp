@@ -11,14 +11,11 @@ int main() {
 	cout << "Informe nome do arquivo que recebera os nomes: ";
 	cin >> nomeArquivo;
 	fflush(stdin);
-	//testar se o arquivo existe
-	if (existeArquivo(nomeArquivo)) {
-		cout << "Programa vai encerrar para nao apagar o arquivo....\n";
-		exit(0);
-	}
+	
     //abrir arquivo para escrita
-	ofstream procuradorArquivo; //tipo de arquivo para escrita do ZERO
-    procuradorArquivo.open(nomeArquivo); 
+	ofstream procuradorArquivo; 
+    //arquivo sendo aberto para append ou inserir no final
+    procuradorArquivo.open(nomeArquivo, ios::out | ios::app);
  
 	string nome;
 	while (true) {
