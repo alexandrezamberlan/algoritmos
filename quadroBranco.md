@@ -1,5 +1,10 @@
 # Quadro Branco e Plano de aulas
 
+## Aula 10
+    - Manipulação de arquivos texto
+        - leitura
+        - escrita
+
 ## Aula 9
     - Funções mais arquivos (leitura e escrita)
         - Exercícios de fixação combinando funções com uso de arquivo texto
