@@ -4,6 +4,48 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void listarPessoas(Pessoa vetor[], int qtdPessoas) {
+    cout << "Listar pessoas....\n";
+    for (int i = 0; i < qtdPessoas; i++) {
+        cout << "Nome: " << vetor[i].nome << ". Email: " << vetor[i].email << endl;
+    }
+    cout << "_______________\n";
+    cout << "Total de registros: " << qtdPessoas << endl;
+
+}
+
+void menu(Pessoa vetor[], int tamanho, int qtdPessoas) {
+    int opcao;
+    do {
+        system("cls");
+        cout << "MENU\n";
+        cout << "1 - Listar pessoas\n";
+        cout << "2 - Cadastrar pessoa\n";
+        cout << "3 - Sair\n";
+        cout << "Opcao: ";
+        cin >> opcao;
+
+        switch (opcao)
+        {
+        case 1:            
+            listarPessoas(vetor, qtdPessoas);
+            break;
+        case 2:
+            cout << "Cadastrar pessoa....\n";
+            //
+            break;
+        case 3:            
+            break;
+        default:
+            cout << "Opcao invalida....\n";
+            break;
+        }
+
+        system("pause");
+    } while (opcao != 3);    
+}
+
+
 void split(string vetor[], string str, string deli = " ") {        
     int start = 0;
     int end = str.find(deli);
@@ -19,7 +61,7 @@ void split(string vetor[], string str, string deli = " ") {
 
 
 int conectarBase(string baseDados, Pessoa vetor[], int tamanho) {
-    int qtd_pessoas = 0;
+    int qtdPessoas = 0;
     ifstream procuradorArquivo; //tipo de arquivo para leitura
     procuradorArquivo.open(baseDados); 
 
@@ -27,7 +69,7 @@ int conectarBase(string baseDados, Pessoa vetor[], int tamanho) {
         cout << "Arquivo da base de dados não localizado. Programa encerrado." << endl;
         exit(0);
     } 
-    if (qtd_pessoas == tamanho) {
+    if (qtdPessoas == tamanho) {
         cout << "Vetor lotado. Programa encerrado." << endl;
         exit(0);
     }
@@ -41,11 +83,11 @@ int conectarBase(string baseDados, Pessoa vetor[], int tamanho) {
         split(vetorLinha, linha, ",");
         //vetorLinha[0] = "Alexandre Zamberlan"
         //vetorLinha[1] = "alexz@ufn.edu.br"
-        vetor[qtd_pessoas].nome = vetorLinha[0];
-        vetor[qtd_pessoas].email = vetorLinha[1];
-        qtd_pessoas += 1;
+        vetor[qtdPessoas].nome = vetorLinha[0];
+        vetor[qtdPessoas].email = vetorLinha[1];
+        qtdPessoas += 1;
 	}
 	procuradorArquivo.close();
-    cout << "Quantidade " << qtd_pessoas << endl;
-    return qtd_pessoas;
+    cout << "Quantidade " << qtdPessoas << endl;
+    return qtdPessoas;
 }

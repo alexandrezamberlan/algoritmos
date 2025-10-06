@@ -13,11 +13,11 @@ typedef struct {
 
 int main() {
     Pessoa vetor[TAM];
-    int qtd_pessoas;
+    int qtdPessoas;
     string baseDados = "base.csv";
 
-    qtd_pessoas = conectarBase(baseDados, vetor, TAM);
-    menu(vetor, TAM, qtd_pessoas);
+    qtdPessoas = conectarBase(baseDados, vetor, TAM);
+    menu(vetor, TAM, qtdPessoas); 
     
     return 1;
 }
