@@ -1,5 +1,38 @@
 # Quadro Branco e Plano de aulas
 
+## Aula 11
+    - Trabalhar:
+        1) Menu: conectar com a base; listar dados; inserir dados
+        2) Vetor de struct: 
+            typedef struct {
+                string nome;
+                string email;
+            } Pessoa;
+        3) Leitura e escrita de arquivo csv
+            ifstream - leitura
+            ofstream - escrita
+            split()
+
+    - Desafio avaliativo:
+        Combinar os programas da Garagem e o da aula, refatorando-os de forma que toda a placa de carro que entre na garagem, além de ser salva no vetor/lista/garagem, também seja salva no arquivo.
+        1) struct:
+        ```
+        typedef struct {
+            string placa;
+            string dataEntrada;
+        } Veiculo;
+        ```
+        2) garagem é um vetor de TAM veiculos:
+        ```
+        Veiculo garagem[TAM];
+        ```
+        3) Menu (antes de executar o menu, conectarBase)
+            1) Entrada veiculo (digitar a placa e a data de entrada, mas pode-se capturar do sistema. Inserir no vetor e no arquivo)
+            2) Listagem veiculos
+            3) Saida veiculo (digitar a placa e retirar da garagem, tanto vetor, quanto arquivo
+            4) Fim programa
+          
+
 ## Aula 10
     - Manipulação de arquivos texto
         - leitura
