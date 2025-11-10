@@ -1,5 +1,58 @@
 # Quadro Branco e Plano de aulas
 
+# Aula 16
+    - Projetar, implementar e testar um sistema terminal, com uso de menu, vetor de dados (tipo struct) e uso de arquivo (base de dados).
+
+    ```
+    Menu
+    1 - Cadastrar
+    2 - Listar
+    3 - Remover
+    4 - Pesquisar
+    5 - Sair
+    Opção
+    ```
+
+    Observações: 
+        1) Ao entrar no sistema, é preciso disparar o método ou a função conectarBase(vetor, TAM, nomeArquivoBase) e retorna a quantidade de dados do arquivo;
+        2) Cadastrar uma degustação, entrando com data, nome do alimento ou da bebida, uma nota (de 1 a 5), nome do fabricante e um comentário.
+        3) Uma degustação deve ser armazenada:
+            a) vetor de Degustação
+            b) arquivo baseDados.dat ou baseDados.csv
+                ```
+                10/11/2025;Cerveja Pilsen;5;Mainz;Cerveja forte
+                11/11/2025;Queijo colonial;4;Da Colonia;Queijo ainda cru
+                ```
+        4) As funcionalidade Remover e Pesquisar devem ser pelo nome do alimento ou da bebida (nomeAlimento).
+        5) Sempre que uma degustação for cadastrada ou removido, o arquivo deve ser atualizado.
+
+
+    ```
+    #define TAM 1000
+
+    typedef struct {
+        string dataDegustacao;
+        string comentario;
+        int nota; //1 a 5
+        string nomeAlimento;
+        string fabricante;
+    } Degustacao;
+
+    Degustacao vetor[TAM];
+    ```
+
+# Aula 15
+    Correção da prova
+
+# Aula 14
+    Prova prática em laboratório
+
+# Aula 13
+    Passagem de parâmetros com valor ou com referência (ponteiros)
+
+# Aula 12
+    Ponteiros
+
 ## Aula 11
     - Trabalhar:
         1) Menu: conectar com a base; listar dados; inserir dados
