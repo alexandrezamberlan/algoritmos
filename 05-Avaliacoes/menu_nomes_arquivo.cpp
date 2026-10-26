@@ -125,6 +125,23 @@ void atualizarBase(vector<string> nomes, string nomeBase) {
     arquivo.close();
 }
 
+void ordenar(vector<string>& nomes) {
+    //usando o bubble sort ou bolha
+    string tmp;
+    bool houveTroca;
+    do {
+        houveTroca = false;
+        for (int i = 0; i < nomes.size()-1; i++) {
+            if (nomes[i] > nomes[i+1]) {
+                houveTroca = true;
+                tmp = nomes[i];
+                nomes[i] = nomes[i+1];
+                nomes[i+1] = tmp;
+            }
+        }
+    } while (houveTroca);
+}
+
 int main() {
     vector<string> nomes;
     int opcao;
@@ -152,6 +169,8 @@ int main() {
         switch (opcao) {
             case 1:
                 if (inserir(nomes)) {
+                    //ordenar o vetor
+                    ordenar(nomes);
                     //atualizar base de dados
                     atualizarBase(nomes, nomeBase);
                 }
