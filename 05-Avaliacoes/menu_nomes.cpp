@@ -17,32 +17,56 @@ void inserir(vector<string>& nomes) {
         return;
     }
 
-    nomes.push_back(nome);
-    cout << "Nome inserido com sucesso.\n";
+    bool encontrado = false;
+    for (int i = 0; i < nomes.size(); i++) {
+        if (nome == nomes[i]) {
+            encontrado = true;
+            break;
+        }
+    }
+    if (encontrado) {
+        cout << "Nome ja cadastrado na estrutura.\n";
+    } else {
+        nomes.push_back(nome);
+        cout << "Nome inserido com sucesso.\n";
+    } 
 }
 
-void listar(const vector<string>& nomes) {
+void listar(vector<string> nomes) {
     if (nomes.empty()) {
         cout << "Nenhum nome cadastrado.\n";
         return;
     }
 
     cout << "\nNomes cadastrados:\n";
-    for (int i = 0; i < static_cast<int>(nomes.size()); i++) {
+    for (int i = 0; i < nomes.size(); i++) {
         cout << i + 1 << " - " << nomes[i] << "\n";
     }
 }
 
-void pesquisar(const vector<string>& nomes) {
+void pesquisar(vector<string> nomes) {
     string nome;
 
     cout << "Digite o nome que deseja pesquisar: ";
     getline(cin, nome);
 
-    vector<string>::const_iterator encontrado =
-        find(nomes.begin(), nomes.end(), nome);
+    // vector<string>::const_iterator encontrado =
+    //     find(nomes.begin(), nomes.end(), nome);
 
-    if (encontrado != nomes.end()) {
+    // if (encontrado != nomes.end()) {
+    //     cout << "Nome encontrado.\n";
+    // } else {
+    //     cout << "Nome nao encontrado.\n";
+    // }
+
+    bool encontrado = false;
+    for (int i = 0; i < nomes.size(); i++) {
+        if (nome == nomes[i]) {
+            encontrado = true;
+            break;
+        }
+    }
+    if (encontrado) {
         cout << "Nome encontrado.\n";
     } else {
         cout << "Nome nao encontrado.\n";
